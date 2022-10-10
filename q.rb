@@ -5,7 +5,9 @@ base = ""
 while session = server.accept
   request = session.gets
   puts request
-  base = request
+  if request != "a\n"
+    base = request
+  end
   session.print(base)
 
 
